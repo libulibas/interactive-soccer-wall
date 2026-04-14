@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Soccer Wall</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animations Container -->
+    <div class="background-container" id="bg-container">
+        <!-- Balls will be dynamically added here via JS, or simple CSS elements -->
+    </div>
+
+    <!-- UI Overlay container -->
+    <div id="ui-layer">
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Soccer Wall</h1>
+            <p>Pop the targets before time runs out!</p>
+            <button id="play-btn" class="primary-btn">PLAY NOW</button>
+        </div>
+
+        <!-- Game Screen (HUD) -->
+        <div id="game-screen" class="screen hidden">
+            <div class="hud">
+                <div class="score-display">Score: <span id="score">0</span></div>
+                <div class="time-display">Time: <span id="time">30</span>s</div>
+            </div>
+            <div id="game-area"></div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="screen hidden">
+            <h2>Time's Up!</h2>
+            <div class="final-score">Final Score: <span id="final-score">0</span></div>
+            <div class="button-group">
+                <button id="retry-btn" class="primary-btn">RETRY</button>
+                <button id="close-btn" class="secondary-btn">CLOSE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
